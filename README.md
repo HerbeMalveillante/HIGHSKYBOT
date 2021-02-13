@@ -35,3 +35,5 @@ Il suffit de remettre le fichier `warns.json` dans son état initial, c'est à d
 ```json
 {}
 ```
+
+autrement, le fichier JSON est simplement un dictionnaire associant le nombre de warns d'un utilisateur à son identifiant Discord. On peut donc facilement le modifier ou le mettre à zéro pour une personne.
