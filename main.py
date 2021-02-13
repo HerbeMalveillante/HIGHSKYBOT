@@ -45,7 +45,7 @@ async def on_ready():
 	log('Logged in successfully !')
 	log(f"Bot username : {bot.user.name}")
 	log(f"Bot id : {bot.user.id}")
-	await bot.change_presence(activity=discord.Game(name=f"{config.prefix}help | {len(bot.users)} users on {len(bot.guilds)} guilds."))
+	await bot.change_presence(activity=discord.Game(name=f"{config.prefix}help | {len(bot.users)} utilisateurs"))
 	print('--------------')
 	for ext in extensions :
 		bot.load_extension(ext)
@@ -133,7 +133,7 @@ async def info(ctx):
 	
 @tasks.loop(seconds=1200.0)
 async def activity():
-	activityString = f"{config.prefix}info | {len(bot.users)} utilisateurs sur {len(bot.guilds)} serveurs."
+	activityString = f"{config.prefix}info | {len(bot.users)} utilisateurs"
 	log(f"[LOOP] Updated activity : {activityString}")
 	await bot.change_presence(activity=discord.Game(name=activityString))
 	
